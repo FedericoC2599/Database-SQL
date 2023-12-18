@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS "Autori" (
 CREATE TABLE IF NOT EXISTS "AutoriELibri" (
 	"IDAutore"	INTEGER CHECK("IDAutore" > 0),
 	"IDLibro"	INTEGER CHECK("IDLibro" > 0),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	FOREIGN KEY("IDAutore") REFERENCES "Autori"("IDAutore"),
 	PRIMARY KEY("IDAutore","IDLibro")
 );
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS "Completamenti" (
 CREATE TABLE IF NOT EXISTS "CompletamentiLibri" (
 	"IDLibro"	INTEGER CHECK("IDLibro" > 0),
 	"IDCompletamento"	INTEGER CHECK("IDCompletamento" > 0),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	FOREIGN KEY("IDCompletamento") REFERENCES "Completamenti"("IDCompletamento"),
 	PRIMARY KEY("IDLibro","IDCompletamento")
 );
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS "Edizioni" (
 	"NumeroEdizione"	INTEGER CHECK("NumeroEdizione" > 0),
 	"AnnoEdizione"	INTEGER,
 	FOREIGN KEY("IDCasaEditrice") REFERENCES "CaseEditrici"("IDCasaEditrice"),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	PRIMARY KEY("IDEdizione")
 );
 
@@ -75,14 +75,14 @@ CREATE TABLE IF NOT EXISTS "Generi" (
 
 -- Tabella: Libri
 CREATE TABLE IF NOT EXISTS "Libri" (
-	"IDLibro"	INTEGER NOT NULL CHECK("ID" > 0),
+	"IDLibro"	INTEGER NOT NULL CHECK("IDLibro" > 0),
 	"ISBN13"	TEXT CHECK(length("ISBN13") >= 13 AND length("ISBN13") <= 26),
 	"Titolo"	TEXT CHECK(length("Titolo") > 0 AND length("Titolo") <= 1000),
 	"AnnoPubblicazione"	TEXT,
 	"CasaEditrice"	INTEGER CHECK("CasaEditrice" > 0),
 	"NumPagine"	NUMERIC CHECK("NumPagine" > 0),
 	FOREIGN KEY("CasaEditrice") REFERENCES "CaseEditrici"("IDCasaEditrice"),
-	PRIMARY KEY("ID")
+	PRIMARY KEY("IDLibro")
 );
 
 -- Tabella: LibriEGeneri
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS "LibriEGeneri" (
 	"IDGenere"	INTEGER CHECK("IDGenere" > 0),
 	"IDSottogenere"	INTEGER CHECK(IDSottogenere > 0),
 	FOREIGN KEY("IDGenere") REFERENCES "Generi"("IDGenere"),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	FOREIGN KEY("IDSottogenere") REFERENCES "Sottogeneri"("IDSottogenere"),
 	PRIMARY KEY("IDLibro","IDGenere","IDSottogenere")
 );
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS "LingueTesto" (
 	"IDLibro"	INTEGER CHECK("IDLibro" > 0),
 	"IDLingua"	INTEGER CHECK("IDLingua" > 0),
 	PRIMARY KEY("IDLibro","IDLingua"),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	FOREIGN KEY("IDLingua") REFERENCES "Lingue"("IDLingua")
 );
 
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS "Traduzioni" (
 	"IDTraduttore"	INTEGER CHECK(IDTraduttore > 0),
 	"IDLingua"	INTEGER CHECK(IDLingua > 0),
 	FOREIGN KEY("IDLingua") REFERENCES "Lingue"("IDLingua"),
-	FOREIGN KEY("IDLibro") REFERENCES "Libri"("ID"),
+	FOREIGN KEY("IDLibro") REFERENCES "Libri"("IDLibro"),
 	FOREIGN KEY("IDTraduttore") REFERENCES "Traduttori"("IDTraduttore"),
 	PRIMARY KEY("IDLibro","IDTraduttore","IDLingua")
 );
