@@ -1,0 +1,11 @@
+SELECT Titolo, (NomeAutore || ' ' || CognomeAutore) AS 'Autore', AnnoPubblicazione, DataInizioLettura, DataFineLettura
+FROM Libri l
+LEFT JOIN AutoriELibri al
+ON l.IDLibro = al.IDLibro
+LEFT JOIN Autori a
+ON al.IDAutore = a.IDAutore
+LEFT JOIN CompletamentiLibri cl
+ON l.IDLibro = cl.IDLibro
+LEFT JOIN Completamenti cm
+ON cl.IDCompletamento = cm.IDCompletamento
+WHERE strftime('%m', cm.DataFineLettura) = '05'
