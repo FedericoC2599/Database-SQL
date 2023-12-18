@@ -3,7 +3,10 @@
 --Overview: Query che seleziona tutti gli attributi principali dei libri incluse le letture (completamenti) dell'autore
 --          comprensive di data di inizio lettura, data di fine lettura e di un campo generato che calcola il numero
 --          di giorni impiegati a leggere un libro della base di dati.
-SELECT l.ID,l.Titolo,l.ISBN13,a.NomeAutore,a.CognomeAutore,a.NazionalitàAutore,l.AnnoPubblicazione,c.NomeCasaEditrice,e.NumeroEdizione,e.AnnoEdizione,li.LinguaLibro,li.LinguaOriginale,t.NomeTraduttore,t.CognomeTraduttore,cm.DataInizioLettura,cm.DataFineLettura,l.NumPagine,cm.PagineLette,(julianday(cm.DataFineLettura) - julianday(cm.DataInizioLettura)) AS GiorniCompletamento 
+SELECT l.ID,l.Titolo,l.ISBN13,a.NomeAutore,a.CognomeAutore,a.NazionalitàAutore,l.AnnoPubblicazione,
+c.NomeCasaEditrice,e.NumeroEdizione,e.AnnoEdizione,li.LinguaLibro,li.LinguaOriginale,t.NomeTraduttore,
+t.CognomeTraduttore,cm.DataInizioLettura,cm.DataFineLettura,l.NumPagine,cm.PagineLette,
+(julianday(cm.DataFineLettura) - julianday(cm.DataInizioLettura)) AS GiorniCompletamento 
 FROM Libri l
 JOIN AutoriELibri al ON al.IDLibro = l.ID
 JOIN Autori a ON a.IDAutore = al.IDAutore
