@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS "Generi" (
 
 -- Tabella: Libri
 CREATE TABLE IF NOT EXISTS "Libri" (
-	"ID"	INTEGER NOT NULL CHECK("ID" > 0),
+	"IDLibro"	INTEGER NOT NULL CHECK("ID" > 0),
 	"ISBN13"	TEXT CHECK(length("ISBN13") >= 13 AND length("ISBN13") <= 26),
 	"Titolo"	TEXT CHECK(length("Titolo") > 0 AND length("Titolo") <= 1000),
 	"AnnoPubblicazione"	TEXT,
