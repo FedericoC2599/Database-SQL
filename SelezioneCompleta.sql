@@ -1,0 +1,1 @@
+SELECT l.ID,l.Titolo,l.ISBN13,a.NomeAutore,a.CognomeAutore,a.NazionalitàAutore,l.AnnoPubblicazione,c.NomeCasaEditrice,c.NumeroEdizione,e.AnnoEdizione,li.LinguaLibro,li.LinguaOriginale,t.NomeTraduttore,t.CognomeTraduttore,cm.DataInizioLettura,cm.DataFineLettura,l.NumPagine,cm.PagineLette,TempoDiCompletamento AS julianday(cm.DataFineLettura) - julianday(cm.DataInizioLettura)
