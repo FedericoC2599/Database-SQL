@@ -1,0 +1,36 @@
+BEGIN TRANSACTION
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (1, 'Antologia');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (2, 'Avventura');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (3, 'Western');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (4, 'Drammatico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (5, 'Cinema');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (6, 'Critica sociale');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (7, 'Dialogico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (8, 'Sportivo');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (9, 'Ermeneutica');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (10, 'Etica');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (11, 'Fantascienza');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (12, 'Distopico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (13, 'Fantastico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (14, 'Filosofico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (15, 'Giallo');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (16, 'Gotico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (17, 'Horror');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (18, 'Lirica');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (19, 'Noir');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (20, 'Politico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (21, 'Post-apocalittico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (22, 'Horror');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (23, 'Psicologico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (24, 'Filosofico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (25, 'Sentimentale');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (26, 'Realismo magico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (27, 'Realista');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (28, 'Storia della filosofia');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (29, 'Storico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (30, 'Teologico');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (31, 'Surrealismo');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (32, 'Teatrale');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (33, 'Thriller');
+INSERT INTO Sottogeneri (IDSottogenere, NomeSottogenere) VALUES (34, 'Satira');
+COMMIT TRANSACTION

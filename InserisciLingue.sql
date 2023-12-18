@@ -1,0 +1,31 @@
+BEGIN TRANSACTION
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (1, 'Inglese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (2, 'Francese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (3, 'Spagnolo', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (4, 'Tedesco', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (5, 'Italiano', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (6, 'Latino', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (7, 'Greco antico', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (8, 'Greco moderno', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (9, 'Rumeno', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (10, 'Finlandese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (11, 'Norvegese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (12, 'Svedese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (13, 'Portoghese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (14, 'Cinese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (15, 'Giapponese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (16, 'Coreano', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (17, 'Danese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (18, 'Indiano', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (19, 'Russo', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (20, 'Vietnamita', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (21, 'Sanscrito', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (22, 'Ebraico', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (23, 'Egizio', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (24, 'Albanese', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (25, 'Turco', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (26, 'Figiano', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (27, 'Georgiano', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (28, 'Ceco', 'Italiano');
+INSERT INTO Lingue (IDLingua, LinguaOriginale, LinguaLibro) VALUES (29, 'Aramaico', 'Italiano');
+COMMIT TRANSACTION
